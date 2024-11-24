@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmbridge - AgriTech Rental Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-logo">
+            <img src="logosample.png" alt="Farmbridge Logo" class="logo">
+        </div>
+        <div class="header-title">
+            <h1>FARMBRIDGE</h1>
+        </div>
+        <div class="header-right">
+            <input type="text" id="search" placeholder="Search Equipment">
+            <button id="loginBtn">Login / Sign Up</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="hero">
+        <h2 id="hero-title">Welcome to Farmbridge</h2>
+        <p id="hero-subtitle">Rent the best agricultural equipment for your farm, without the high upfront costs.</p>
+        <button id="equipments" class="rent-btn">Rent Equipment</button>
+    </div>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p id="about-us-text">Farmbridge is a platform dedicated to helping small-scale farmers access affordable agricultural machinery through a rental system. Our mission is to support farmers in increasing their productivity without significant investment in machinery.</p>
+        <div class="image-gallery">
+            <img src="F1.jpeg" alt="Farming Image 1">
+            <img src="F2.jpg" alt="Farming Image 2">
+            <img src="F3.jpeg" alt="Farming Image 3">
+        </div>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p id="contact-email">Email: info@farmbridge.com</p>
+        <p id="contact-phone">Phone: +1-800-FARM-123</p>
+    </section>
+
+    <!-- Language Selector -->
+    <div id="language-selector">
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('hi')">Hindi</button>
+        <button onclick="changeLanguage('te')">Telugu</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

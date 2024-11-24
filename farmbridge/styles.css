@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.hero {
+    margin-top: 70px;
+    padding: 50px;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    text-align: center;
+    color: rgb(254, 253, 253);
+}
+
+.rent-btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.rent-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Gallery */
+.image-gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#about-us {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+#contact-us {
+    text-align: center;
+    padding: 50px;
+    background-color: #f1f1f1;
+}
+
+#language-selector button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#language-selector button:hover {
+    background-color: #45a049;
+}
+.equipment-item{
+    align-items: center;
+    justify-content: center;
+}
+.header-logo{
+    width: 80px;
+    border-radius: 10px;
+}
+
+.hero{
+    background-image: url('sample1.jpg');
+}
+.form-container{
+    margin-top: 30%;
+    
+}

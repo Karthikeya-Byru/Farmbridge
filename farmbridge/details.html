@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmbridge - Equipment Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .details-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .details-container p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .details-container .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .details-container .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Equipment Details</h1>
+    </header>
+
+    <div class="details-container">
+        <h2 id="equipmentName">Equipment Name</h2>
+        <p id="equipmentDescription">Description about the selected equipment will go here.</p>
+        <p id="price">Price per day: $0</p>
+        <p id="contact">contactdetails</p>
+        <h3>Owner Details:</h3>
+        <p>John Doe, Contact: +1-800-123-4567</p>
+        <h3>Admin Support:</h3>
+        <p>Email: admin@farmbridge.com</p>
+        <button class="btn">Proceed to Payment</button>
+    </div>
+
+    <script>
+        // Example data (ideally fetched dynamically from a database)
+        const equipmentDetails = {
+            1: { name: "Tractor", description: "Heavy-duty tractor for large fields", price: 100, contact : xxxxxxxxxx },
+            2: { name: "Plow", description: "Plowing tool for soil preparation", price: 40, contact : xxxxxxxxxx },
+            3: { name: "Seeder", description: "Automatic seed planter", price: 50, contact : xxxxxxxxxx },
+        };
+
+        // Extract equipment ID from query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const equipmentId = urlParams.get('id');
+
+        // Populate details dynamically
+        if (equipmentId && equipmentDetails[equipmentId]) {
+            const details = equipmentDetails[equipmentId];
+            document.getElementById('equipmentName').textContent = details.name;
+            document.getElementById('equipmentDescription').textContent = details.description;
+            document.getElementById('price').textContent = `Price per day: $${details.price}`;
+        } else {
+            alert("Invalid equipment selected.");
+        }
+    </script>
+</body>
+</html>

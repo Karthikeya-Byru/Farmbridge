@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmbridge - Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .equipment-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .equipment-item {
+            margin-top: 100px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            align-items: end;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .equipment-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .equipment-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .equipment-item h3 {
+            margin: 10px 0;
+        }
+
+        .equipment-item p {
+            color: #555;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Available Equipment</h1>
+    </header>
+
+    <div class="equipment-container">
+        <!-- Equipment Items -->
+        <div class="equipment-item" onclick="navigateToDetails(1)">
+            <img src="tractor.jpeg" alt="Tractor">
+            <h3>Tractor</h3>
+            <p>Price per day: $100</p>
+        </div>
+        <div class="equipment-item" onclick="navigateToDetails(2)">
+            <img src="plow.jpeg" alt="Plow">
+            <h3>Plow</h3>
+            <p>Price per day: $40</p>
+        </div>
+        <div class="equipment-item" onclick="navigateToDetails(3)">
+            <img src="seeder.jpeg" alt="Seeder">
+            <h3>Seeder</h3>
+            <p>Price per day: $50</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Farmbridge - Empowering Farmers</p>
+    </footer>
+
+    <script>
+        function navigateToDetails(equipmentId) {
+            // Redirect to details page with equipment ID as a query parameter
+            window.location.href = `details.html?id=${equipmentId}`;
+        }
+    </script>
+</body>
+</html>
